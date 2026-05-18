@@ -28,7 +28,5 @@ Actionable Recommendations: Provide insights on the most important customer segm
  
 Submission: 
 Submit Jupyter notebook (.ipynb) containing data analysis, preprocessing steps, and model training. 
+Include the trained model file in the submission. Create a simple streamlit app using this model.
 Submit final report as .docx or PowerPoint Presentation. 
-(Optional) Submit Power BI or Tableau dashboard visualizing churn patterns and model performance. 
-Include the trained model file in the submission. 
-NOTE: Create a zip file of the above mentioned items for the final submission. 
