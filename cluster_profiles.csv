@@ -1,0 +1,5 @@
+Cluster,Count,Avg_Recency,Median_Recency,Avg_Frequency,Median_Frequency,Avg_Monetary,Median_Monetary,Segment
+0,837,18.12,17.0,2.15,2.0,551.82,471.7,Potential Loyalists
+1,716,12.13,8.0,13.71,10.0,8074.27,3733.87,Champions
+2,1173,71.08,56.0,4.08,4.0,1802.83,1345.62,At Risk
+3,1612,182.5,177.0,1.32,1.0,343.45,298.26,At Risk (C3)
