@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mohamad Aliyul Rahman – Resume</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      font-size: 11px;
+      color: #1a1a1a;
+      background: #fff;
+    }
+
+    /* ── PAGE WRAPPER ── */
+    .page {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0;
+    }
+
+    /* ── HEADER ── */
+    .header {
+      background: #1b3a5c;
+      color: #fff;
+      padding: 22px 30px 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+    .header-left h1 {
+      font-size: 26px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    .header-left .title {
+      font-size: 12px;
+      font-weight: 400;
+      color: #a8c8e8;
+      margin-top: 3px;
+      letter-spacing: 0.5px;
+    }
+    .header-right {
+      text-align: right;
+      font-size: 10.5px;
+      line-height: 1.7;
+      color: #d0e8f8;
+    }
+    .header-right a { color: #7ec8e3; text-decoration: none; }
+
+    /* ── BODY LAYOUT ── */
+    .body {
+      display: grid;
+      grid-template-columns: 240px 1fr;
+      gap: 0;
+    }
+
+    /* ── LEFT COLUMN ── */
+    .left-col {
+      background: #f0f5fa;
+      padding: 20px 16px;
+      border-right: 2px solid #d0dde9;
+    }
+
+    /* ── RIGHT COLUMN ── */
+    .right-col {
+      padding: 20px 24px;
+    }
+
+    /* ── SECTION TITLES ── */
+    .section-title {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: #1b3a5c;
+      border-bottom: 2px solid #1b3a5c;
+      padding-bottom: 3px;
+      margin-bottom: 10px;
+      margin-top: 18px;
+    }
+    .left-col .section-title:first-child,
+    .right-col .section-title:first-child {
+      margin-top: 0;
+    }
+
+    /* ── SKILL GROUPS ── */
+    .skill-group { margin-bottom: 10px; }
+    .skill-group .group-label {
+      font-size: 10.5px;
+      font-weight: 700;
+      color: #1b3a5c;
+      margin-bottom: 3px;
+    }
+    .skill-group ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    .skill-group ul li {
+      font-size: 10px;
+      color: #333;
+      padding: 1px 0;
+      padding-left: 10px;
+      position: relative;
+    }
+    .skill-group ul li::before {
+      content: '▸';
+      position: absolute;
+      left: 0;
+      color: #1b6ca8;
+    }
+
+    /* Badge-style tags */
+    .badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+      margin-bottom: 6px;
+    }
+    .badge {
+      background: #1b3a5c;
+      color: #fff;
+      font-size: 9px;
+      padding: 2px 7px;
+      border-radius: 10px;
+      font-weight: 600;
+    }
+    .badge.secondary {
+      background: #4a8abf;
+    }
+    .badge.green {
+      background: #2a7a4b;
+    }
+
+    /* ── CERTIFICATIONS ── */
+    .cert-item {
+      margin-bottom: 8px;
+    }
+    .cert-item .cert-name {
+      font-weight: 700;
+      font-size: 10.5px;
+      color: #1b3a5c;
+    }
+    .cert-item .cert-detail {
+      font-size: 10px;
+      color: #555;
+    }
+
+    /* ── EDUCATION ── */
+    .edu-item {
+      margin-bottom: 8px;
+    }
+    .edu-item .edu-degree {
+      font-weight: 700;
+      font-size: 10.5px;
+      color: #1b3a5c;
+    }
+    .edu-item .edu-detail {
+      font-size: 10px;
+      color: #444;
+      line-height: 1.5;
+    }
+
+    /* ── PROFILE SUMMARY ── */
+    .summary-list {
+      list-style: none;
+      padding: 0;
+    }
+    .summary-list li {
+      font-size: 10.5px;
+      color: #222;
+      padding: 3px 0 3px 14px;
+      position: relative;
+      line-height: 1.5;
+    }
+    .summary-list li::before {
+      content: '●';
+      position: absolute;
+      left: 0;
+      color: #1b6ca8;
+      font-size: 8px;
+      top: 5px;
+    }
+    .summary-list li strong { color: #1b3a5c; }
+    .summary-sub {
+      list-style: none;
+      padding: 3px 0 0 16px;
+      margin: 0;
+    }
+    .summary-sub li {
+      font-size: 10px;
+      color: #333;
+      padding: 2px 0 2px 12px;
+      position: relative;
+      line-height: 1.5;
+    }
+    .summary-sub li::before {
+      content: '–';
+      position: absolute;
+      left: 0;
+      color: #4a8abf;
+    }
+
+    /* ── KEY STRENGTHS ── */
+    .strengths-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px;
+      margin-bottom: 4px;
+    }
+    .strength-card {
+      background: #eaf2fb;
+      border-left: 3px solid #1b6ca8;
+      padding: 5px 8px;
+      border-radius: 2px;
+    }
+    .strength-card .sc-title {
+      font-size: 10px;
+      font-weight: 700;
+      color: #1b3a5c;
+    }
+    .strength-card .sc-desc {
+      font-size: 9.5px;
+      color: #444;
+      margin-top: 1px;
+    }
+
+    /* ── EMPLOYMENT TABLE ── */
+    .emp-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 10.5px;
+    }
+    .emp-table thead tr {
+      background: #1b3a5c;
+      color: #fff;
+    }
+    .emp-table thead th {
+      padding: 6px 8px;
+      text-align: left;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.4px;
+    }
+    .emp-table tbody tr:nth-child(even) { background: #f4f8fc; }
+    .emp-table tbody tr:nth-child(odd)  { background: #fff; }
+    .emp-table tbody td {
+      padding: 6px 8px;
+      vertical-align: top;
+      border-bottom: 1px solid #dde6f0;
+    }
+    .emp-table .company { font-weight: 700; color: #1b3a5c; }
+    .emp-table .tenure  { color: #444; font-size: 10px; }
+    .emp-table .role    { font-weight: 600; }
+    .emp-table .client  { font-size: 9.5px; color: #1b6ca8; }
+    .emp-table .projects { color: #333; font-size: 10px; }
+    .current-row td { border-left: 3px solid #2a7a4b; }
+
+    /* ── TABLE COLUMN WIDTHS ── */
+    .col-company  { width: 26%; }
+    .col-tenure   { width: 24%; }
+
+    /* ── ONSITE NOTE ── */
+    .onsite-note {
+      margin-top: 8px;
+      background: #eaf2fb;
+      border-left: 3px solid #1b6ca8;
+      padding: 6px 10px;
+      font-size: 10px;
+      color: #333;
+    }
+
+    /* ── PRINT ── */
+    @media print {
+      body { font-size: 10px; }
+      .page { max-width: 100%; }
+      .header { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .emp-table thead tr,
+      .strength-card,
+      .left-col,
+      .badge { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- ═══ HEADER ═══ -->
+  <div class="header">
+    <div class="header-left">
+      <h1>Mohamad Aliyul Rahman</h1>
+      <div class="title">Full Stack Developer &nbsp;|&nbsp; Expanding into Data Science &amp; AI</div>
+    </div>
+    <div class="header-right">
+      +973 36317294 &nbsp;|&nbsp; +91 9159031592<br/>
+      <a href="mailto:aliyulrahman@gmail.com">aliyulrahman@gmail.com</a><br/>
+      <a href="https://linkedin.com/in/aliyul-rahman-m-026532a8" target="_blank" rel="noopener">linkedin.com/in/aliyul-rahman-m-026532a8</a>
+    </div>
+  </div>
+
+  <!-- ═══ BODY ═══ -->
+  <div class="body">
+
+    <!-- ─── LEFT COLUMN ─── -->
+    <div class="left-col">
+
+      <!-- PRIMARY SKILLS -->
+      <div class="section-title">Primary Skills</div>
+
+      <div class="skill-group">
+        <div class="group-label">Frontend</div>
+        <ul>
+          <li>Angular (Primary)</li>
+          <li>TypeScript, JavaScript</li>
+          <li>HTML5, CSS3, Bootstrap</li>
+          <li>Angular Material Design</li>
+          <li>jQuery</li>
+          <li>Streamlit (Python UI)</li>
+        </ul>
+      </div>
+
+      <div class="skill-group">
+        <div class="group-label">Backend (.NET / Node)</div>
+        <ul>
+          <li>ASP.NET Core</li>
+          <li>ASP.NET Web API</li>
+          <li>ASP.NET MVC 5</li>
+          <li>C# &nbsp;|&nbsp; Node.js &nbsp;|&nbsp; Express.js</li>
+          <li>Entity Framework &amp; LINQ</li>
+        </ul>
+      </div>
+
+      <div class="skill-group">
+        <div class="group-label">Database</div>
+        <ul>
+          <li>SQL Server</li>
+          <li>MongoDB</li>
+          <li>Mongoose ORM</li>
+        </ul>
+      </div>
+
+      <div class="skill-group">
+        <div class="group-label">Cloud &amp; DevOps</div>
+        <ul>
+          <li>Microsoft Azure (AZ-204)</li>
+          <li>Azure Web App Deployment</li>
+          <li>Azure App Services</li>
+        </ul>
+      </div>
+
+      <div class="skill-group">
+        <div class="group-label">AI &amp; Data</div>
+        <ul>
+          <li>OpenAI &amp; Gemini integration</li>
+          <li>Claude (Anthropic) Ecosystem</li>
+          <li>Langflow (AI workflow builder)</li>
+          <li>Vibe Coding (AI-assisted dev)</li>
+          <li>Python (Data Science / AI)</li>
+          <li>Power BI – Dashboards &amp; Deployment</li>
+          <li>Streamlit (Data Apps)</li>
+          <li>DocFusion (Doc Automation)</li>
+        </ul>
+      </div>
+
+      <!-- SECONDARY SKILLS -->
+      <div class="section-title">Secondary Skills</div>
+
+      <div class="skill-group">
+        <div class="group-label">MERN Stack</div>
+        <ul>
+          <li>MongoDB</li>
+          <li>Express.js</li>
+          <li>React.js</li>
+          <li>Node.js</li>
+        </ul>
+      </div>
+
+      <div class="skill-group">
+        <div class="group-label">Testing &amp; Tooling</div>
+        <ul>
+          <li>Jasmine &amp; Karma (Unit Testing)</li>
+          <li>JIRA (Agile / Scrum)</li>
+        </ul>
+      </div>
+
+      <!-- CERTIFICATIONS -->
+      <div class="section-title">Certifications</div>
+
+      <div class="cert-item">
+        <div class="cert-name">Microsoft Certified</div>
+        <div class="cert-detail">Azure Developer Associate<br/><strong>AZ-204</strong></div>
+      </div>
+
+      <div class="cert-item">
+        <div class="cert-name">Data Science &amp; AI</div>
+        <div class="cert-detail">
+          Boston Institute of Analytics<br/>
+          Jan 2026 – May 2026
+        </div>
+      </div>
+
+      <!-- EDUCATION -->
+      <div class="section-title">Education</div>
+
+      <div class="edu-item">
+        <div class="edu-degree">B.Tech – ECE</div>
+        <div class="edu-detail">Pondicherry University, 2016<br/>CGPA: 8.3</div>
+      </div>
+      <div class="edu-item">
+        <div class="edu-degree">Higher Secondary</div>
+        <div class="edu-detail">Vailankanni Matric. Hr. Sec. School, Puducherry, 2012 &nbsp;|&nbsp; 93.7%</div>
+      </div>
+      <div class="edu-item">
+        <div class="edu-degree">SSLC</div>
+        <div class="edu-detail">Vesley English High School, Puducherry, 2010 &nbsp;|&nbsp; 92.6%</div>
+      </div>
+
+    </div><!-- /left-col -->
+
+    <!-- ─── RIGHT COLUMN ─── -->
+    <div class="right-col">
+
+      <!-- PROFILE SUMMARY -->
+      <div class="section-title">Profile Summary</div>
+      <ul class="summary-list">
+        <li><strong>Full Stack Developer with 10 years of experience</strong> delivering scalable enterprise web applications using Microsoft .NET, Azure, MERN stack, and JavaScript technologies.</li>
+        <li><strong>Current Role:</strong> <strong>Assistant Consultant (Grade C3A)</strong> at <strong>Tata Consultancy Services, Bahrain</strong> (Dec 2025 – Present), deployed on-site at <strong>Investcorp Bank, Bahrain</strong> — continuing 3+ years of uninterrupted contribution to Investcorp's digital transformation initiatives.</li>
+        <li><strong>Microsoft .NET Expert:</strong> Deep expertise in ASP.NET Core, Web API, MVC, C#, Entity Framework — with a Microsoft Certified Azure Developer Associate (AZ-204) credential and hands-on Azure Web App deployment experience.</li>
+        <li><strong>AI &amp; Data Science:</strong> Certified in Data Science &amp; AI (Boston Institute of Analytics, 2026). Experienced integrating OpenAI and Gemini models, working within the Claude (Anthropic) ecosystem, and applying vibe coding techniques for AI-assisted development. Proficient in Python and Streamlit for building data apps.</li>
+        <li><strong>Power BI:</strong> Extensive experience designing, developing, and deploying Power BI dashboards for business intelligence and executive-level reporting.</li>
+        <li><strong>Frontend Proficiency:</strong> Primary expertise in Angular and TypeScript; secondary experience with React.js (within MERN stack), JavaScript, HTML5, CSS3, and Bootstrap.</li>
+        <li><strong>MERN Stack:</strong> Secondary capability across MongoDB, Express.js, React.js, and Node.js — applied across multiple client projects.</li>
+        <li><strong>International Client Engagement:</strong> 8+ years of direct interaction with global clients from <strong>Sweden, Philippines, USA, UK, and the Middle East</strong>.</li>
+        <li><strong>Domain Coverage:</strong> Banking, Healthcare, Construction, Poll Management, Invoice Management, CRM, ERP, Public Utilities, and Office Administration.</li>
+        <li><strong>Onsite Experience:</strong>
+          <ul class="summary-sub">
+            <li><strong>Investcorp Bank, Bahrain</strong> (Jul 2022 – Present · 3+ years) — End-to-end ownership of banking automation systems including File Handler, ICR, BOIR submission, Admin Portal, and PE &amp; RE automations. Currently engaged via TCS as Assistant Consultant (Grade C3A).</li>
+            <li><strong>Makati Development Corporation, Philippines</strong> (Aug 2018 – Feb 2019) — On-site delivery of the MDC UPPR urban planning and permit management system in Manila.</li>
+          </ul>
+        </li>
+      </ul>
+
+      <!-- KEY STRENGTHS -->
+      <div class="section-title">Key Strengths</div>
+      <div class="strengths-grid">
+        <div class="strength-card">
+          <div class="sc-title">Enterprise .NET Development</div>
+          <div class="sc-desc">ASP.NET Core, Web API, MVC, C# — production-grade systems for banking &amp; finance clients</div>
+        </div>
+        <div class="strength-card">
+          <div class="sc-title">Azure Cloud &amp; Deployment</div>
+          <div class="sc-desc">AZ-204 certified · Azure Web App deployment · App Services configuration</div>
+        </div>
+        <div class="strength-card">
+          <div class="sc-title">AI Integration &amp; Data Science</div>
+          <div class="sc-desc">OpenAI · Gemini · Claude Ecosystem · Langflow · Vibe Coding · Python · Data Science &amp; AI certified (BIA, 2026)</div>
+        </div>
+        <div class="strength-card">
+          <div class="sc-title">Power BI Dashboards</div>
+          <div class="sc-desc">Dashboard design, development &amp; deployment — data visualization for business reporting</div>
+        </div>
+        <div class="strength-card">
+          <div class="sc-title">MERN Stack (Secondary)</div>
+          <div class="sc-desc">React.js · Angular · Node.js · Express.js · MongoDB — end-to-end JS delivery</div>
+        </div>
+        <div class="strength-card">
+          <div class="sc-title">Onsite Client Leadership</div>
+          <div class="sc-desc">Investcorp Bank, Bahrain (3+ yrs) · MDC Philippines · 8+ yrs global client engagement</div>
+        </div>
+        <div class="strength-card">
+          <div class="sc-title">Agile Delivery</div>
+          <div class="sc-desc">Scrum methodology · JIRA · unit testing (Jasmine/Karma) · CI-driven quality</div>
+        </div>
+      </div>
+
+      <!-- EMPLOYMENT HISTORY -->
+      <div class="section-title">Employment History</div>
+      <table class="emp-table">
+        <thead>
+          <tr>
+            <th class="col-company">Company</th>
+            <th class="col-tenure">Role &amp; Tenure</th>
+            <th>Projects / Contributions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="current-row">
+            <td>
+              <div class="company">Tata Consultancy Services</div>
+              <div class="tenure">Bahrain</div>
+              <div class="client">Client: Investcorp Bank, Bahrain</div>
+            </td>
+            <td>
+              <div class="role">Assistant Consultant (Grade C3A)</div>
+              <div class="tenure">Dec 2025 – Present</div>
+            </td>
+            <td class="projects">
+              Continuing Investcorp Bank digital initiatives — Azure-deployed web apps, PE &amp; RE automation enhancements, AI-assisted document processing, ongoing portal development.
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="company">Mindteck Middle East WLL</div>
+              <div class="tenure">Bahrain</div>
+              <div class="client">Client: Investcorp Bank, Bahrain</div>
+            </td>
+            <td>
+              <div class="role">Senior Software Engineer</div>
+              <div class="tenure">Jul 2022 – Nov 2025</div>
+            </td>
+            <td class="projects">
+              File Handler System · ICR · Admin Portal App · BOIR File Submission System · PE &amp; RE Automations
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="company">Merit Data &amp; Technology Pvt Ltd</div>
+              <div class="tenure">Chennai, India</div>
+            </td>
+            <td>
+              <div class="role">Senior Software Engineer</div>
+              <div class="tenure">Jun 2020 – Jul 2022</div>
+            </td>
+            <td class="projects">
+              LexisNexis – Everyfile · Citywire (Poll Management System) · Proagrica Rebates
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="company">Psiog Digital Pvt Ltd</div>
+              <div class="tenure">Chennai, India</div>
+            </td>
+            <td>
+              <div class="role">Senior Software Engineer</div>
+              <div class="tenure">May 2019 – Jun 2020</div>
+            </td>
+            <td class="projects">
+              Mears (Timelink &amp; Ace WebApp) · Creatio · Flairdata
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="company">Object Frontier Software</div>
+              <div class="tenure">Chennai, India</div>
+            </td>
+            <td>
+              <div class="role">Software Engineer</div>
+              <div class="tenure">Jul 2016 – May 2019</div>
+            </td>
+            <td class="projects">
+              MDC UPPR (Philippines – Onsite Aug 2018 – Feb 2019) · Swinx Scanlev (Sweden)
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- ONSITE EXPERIENCE NOTE -->
+      <div class="onsite-note">
+        <strong>Onsite Deployments:</strong> &nbsp; Investcorp Bank, Bahrain (Jul 2022 – Present) &nbsp;|&nbsp; Makati Development Corporation, Philippines (Aug 2018 – Feb 2019)
+      </div>
+
+    </div><!-- /right-col -->
+  </div><!-- /body -->
+
+</div><!-- /page -->
+</body>
+</html>
